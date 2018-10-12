@@ -6,8 +6,7 @@
       <hr>
       <br><br>
 
-      <v-transfer :title="title"></v-transfer>
-      <v-transfer :title="msg"></v-transfer>
+      <v-transfer :title="title" :run="run" :home="this"></v-transfer>
 
     </div>
 </template>
@@ -25,6 +24,9 @@
         methods: {
           tip(){
            alert(this.msg)
+          },
+          run(){
+            console.log('父组件方法传递...');
           }
         },
         components: {
