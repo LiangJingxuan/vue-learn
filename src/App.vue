@@ -31,6 +31,11 @@
     <hr>
     <br>
 
+    <v-news></v-news>
+
+    <br>
+    <hr>
+    <br>
 
 
   </div>
@@ -47,9 +52,10 @@
 
 
   // 引入组件
-  import Header from './components/Header'
-  import Life from './components/Life'
-  import Resource from './components/Resource'
+  import Header from './components/Header';
+  import News from './components/News';
+  import Life from './components/Life';
+  import Resource from './components/Resource';
 
   export default {
     name: 'app',
@@ -92,6 +98,7 @@
       'v-header': Header,
       'v-life': Life,
       'v-resource': Resource,
+      'v-news': News
     }
 
 
