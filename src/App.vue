@@ -1,6 +1,17 @@
 <template>
   <div id="app">
 
+    <router-link to="/">Go to home</router-link>
+    <br>
+    <router-link to="/test">Go to test</router-link>
+    <br>
+    <router-link to="/r1">Go to router1</router-link>
+    <br>
+    <router-link to="/r2">Go to router2</router-link>
+    <br>
+    <router-link to="/r3">Go to router3</router-link>
+    <br>
+
     <input type="text" v-model="todo" @keydown="addList($event)">
     <!--<button @click="addList">增加</button>-->
     <hr>
@@ -37,6 +48,17 @@
     <hr>
     <br>
 
+    <router-link to="/list">新闻列表</router-link>
+
+    <br>
+    <hr>
+    <br>
+
+    <router-view></router-view>
+
+    <br>
+    <hr>
+    <br>
 
   </div>
 </template>
@@ -56,6 +78,7 @@
   import News from './components/News';
   import Life from './components/Life';
   import Resource from './components/Resource';
+  // import List from './components/List';
 
   export default {
     name: 'app',
@@ -98,7 +121,7 @@
       'v-header': Header,
       'v-life': Life,
       'v-resource': Resource,
-      'v-news': News
+      'v-news': News,
     }
 
 

@@ -1,6 +1,11 @@
 <template>
     <div>
       <h2>新闻组件：非父子组件传值</h2>
+      <ul>
+        <li v-for="(l,key) in list">
+          <router-link to="/detail/">{{l}}</router-link>
+        </li>
+      </ul>
     </div>
 </template>
 
@@ -11,7 +16,8 @@
       name: "News",
       data(){
           return {
-            news: '新闻组件内容'
+            news: '新闻组件内容',
+            list: ['新闻1','新闻2','新闻3','新闻4']
           }
       },
 
