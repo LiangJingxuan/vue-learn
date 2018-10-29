@@ -54,11 +54,29 @@
     <hr>
     <br>
 
-    <router-view></router-view>
+    <br>
+    <hr>
+    <br>
+
+    <button @click="hrefGo()">跳转到新闻路由</button>
 
     <br>
     <hr>
     <br>
+
+    <router-link to="/list">新闻列表</router-link>
+
+    <br>
+    <hr>
+    <br>
+
+    <router-link to="/user/add">用户中心</router-link>
+
+    <br>
+    <hr>
+    <br>
+
+    <router-view></router-view>
 
   </div>
 </template>
@@ -78,7 +96,6 @@
   import News from './components/News';
   import Life from './components/Life';
   import Resource from './components/Resource';
-  // import List from './components/List';
 
   export default {
     name: 'app',
@@ -108,6 +125,10 @@
       del(key){
         // console.log(key);
         this.list.splice(key,1);
+      },
+      hrefGo(){
+        // this.$router.push({path:'list'});
+        this.$router.push({path:'article/495'});
       }
     },
 
@@ -121,7 +142,7 @@
       'v-header': Header,
       'v-life': Life,
       'v-resource': Resource,
-      'v-news': News,
+      'v-news': News
     }
 
 

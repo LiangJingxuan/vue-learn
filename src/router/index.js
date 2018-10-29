@@ -11,6 +11,10 @@ import Content from '@/components/Content'
 import List from '@/components/List'
 import Article from '@/components/Article'
 
+import User from '@/components/User'
+import UserAdd from '@/components/User/UserAdd'
+import UserEdit from '@/components/User/UserEdit'
+
 Vue.use(Router);
 
 export default new Router({
@@ -64,6 +68,17 @@ export default new Router({
       path: '/article/:id',
       name: 'article',
       component: Article
-    }
+    },
+    {
+      path: '/user',
+      name: 'user',
+      component: User,
+
+      // 设置子路由
+      children: [
+        {path: 'add',component: UserAdd},
+        {path: 'edit',component: UserEdit}
+      ]
+    },
   ]
 })
