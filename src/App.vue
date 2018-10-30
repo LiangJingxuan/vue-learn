@@ -117,7 +117,21 @@
     <hr>
     <br>
 
-    <mt-spinner></mt-spinner>
+    <!--<mt-spinner></mt-spinner>-->
+
+    <br>
+    <hr>
+    <br>
+
+    <el-switch
+      v-model="value2"
+      active-color="#13ce66"
+      inactive-color="#ccc">
+    </el-switch>
+
+    <i class="el-icon-edit"></i>
+    <i class="el-icon-share"></i>
+    <i class="el-icon-delete"></i>
 
     <br>
     <hr>
@@ -152,6 +166,8 @@
       return {
         todo: '',
         list: [],
+        value1: true,
+        value2: true
       }
     },
 

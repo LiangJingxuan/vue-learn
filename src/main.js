@@ -9,10 +9,15 @@ import VueResource from 'vue-resource'  // 请求数据插件
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
+// elemetn-ui的使用配置
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
 Vue.config.productionTip = false;
 
 Vue.use(VueResource); // 使用请求数据插件
 Vue.use(MintUI); // mint-ui的使用
+Vue.use(ElementUI); // element-ui的使用
 
 /* eslint-disable no-new */
 new Vue({
