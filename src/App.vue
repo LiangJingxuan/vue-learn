@@ -78,6 +78,51 @@
 
     <router-view></router-view>
 
+
+    <br>
+    <hr>
+    <br>
+
+    <mt-button type="default">default</mt-button>
+    <mt-button type="primary">primary</mt-button>
+    <mt-button type="danger">danger</mt-button>
+
+    <br>
+    <hr>
+    <br>
+
+    <mt-index-list>
+      <mt-index-section index="A">
+        <mt-cell title="Aaron"></mt-cell>
+        <mt-cell title="Alden"></mt-cell>
+        <mt-cell title="Austin"></mt-cell>
+      </mt-index-section>
+      <mt-index-section index="B">
+        <mt-cell title="Baldwin"></mt-cell>
+        <mt-cell title="Braden"></mt-cell>
+      </mt-index-section>
+      <mt-index-section index="Z">
+        <mt-cell title="Zack"></mt-cell>
+        <mt-cell title="Zane"></mt-cell>
+      </mt-index-section>
+    </mt-index-list>
+
+    <br>
+    <hr>
+    <br>
+
+    <mt-actionsheet></mt-actionsheet>
+
+    <br>
+    <hr>
+    <br>
+
+    <mt-spinner></mt-spinner>
+
+    <br>
+    <hr>
+    <br>
+
   </div>
 </template>
 
@@ -96,6 +141,8 @@
   import News from './components/News';
   import Life from './components/Life';
   import Resource from './components/Resource';
+  import ActionSheet from './components/ActionSheet';
+  import InfiniteScroll from './components/InfiniteScroll';
 
   export default {
     name: 'app',
@@ -142,7 +189,9 @@
       'v-header': Header,
       'v-life': Life,
       'v-resource': Resource,
-      'v-news': News
+      'v-news': News,
+      'mt-actionsheet': ActionSheet,
+      'mt-spinner': InfiniteScroll
     }
 
 
